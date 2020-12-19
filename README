@@ -1,0 +1,22 @@
+NOTE: This branch exists to archive old branches that are no longer useful.
+Do not delete this branch or force push over it.
+
+
+* How to delete and archive the branch if we no longer need it?
+
+$ git checkout <branch>						# Checkout to the branch we want to delete
+$ git rm -rf .							# Delete all files of the branch
+$ git add . && git commit -m "Delete '<branch>'for archive."	# Add the commit to record
+$ git checkout __archive__					# Checkout to the archive branch
+$ git merge <branch>						# Merge the branch
+$ git add . && git commit					# Add the branch informations into README
+$ git push origin __archive__					# Updated to the __archive__ branch
+$ git branch -D <branch>					# Delete the local branch
+$ git push origin --delete <branch>				# Delete the remote branch
+
+
+      --------- Archived binutils branches ---------
+  Archived Date		Branch Name					Note
+
+      --------- Archived gdb branches ---------
+  Archived Date		Branch Name					Note
