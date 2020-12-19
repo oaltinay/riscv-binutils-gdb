@@ -21,3 +21,4 @@ $ git push origin --delete <branch>				# Delete the remote branch
 
       --------- Archived gdb branches ---------
   Archived Date		Branch Name					Note
+  2020-12-19		sifive-gdb-9.1-rvv-1.0-with-sim-obsolete
