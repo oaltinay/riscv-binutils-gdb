@@ -17,6 +17,7 @@ $ git push origin --delete <branch>				# Delete the remote branch
 
       --------- Archived binutils branches ---------
   Archived Date		Branch Name					Note
+  2020-12-19		sifive-rvv-1.0.x-zfh-obsolete
 
       --------- Archived gdb branches ---------
   Archived Date		Branch Name					Note
