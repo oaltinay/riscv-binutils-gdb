@@ -2704,7 +2704,11 @@ const struct riscv_opcode riscv_opcodes[] =
 {"vdotu.vv",   0, INSN_CLASS_V,  "Vd,Vt,VsVm", MATCH_VDOTUVV, MASK_VDOTUVV, match_opcode, 0},
 {"vfdot.vv",   0, INSN_CLASS_V,  "Vd,Vt,VsVm", MATCH_VFDOTVV, MASK_VFDOTVV, match_opcode, 0},
 /* END RVV */
-
+// ! Custom Instructions
+{"cust0", 0, INSN_CLASS_I, "d,s,t", MATCH_CUST0, MASK_CUST0, match_opcode, 0},
+{"cust1", 0, INSN_CLASS_I, "d,s,t", MATCH_CUST1, MASK_CUST1, match_opcode, 0},
+{"cust2", 0, INSN_CLASS_I, "d,s,t", MATCH_CUST2, MASK_CUST2, match_opcode, 0},
+{"cust3", 0, INSN_CLASS_I, "d,s,t", MATCH_CUST3, MASK_CUST3, match_opcode, 0},
 /* Terminate the list.  */
 {0, 0, INSN_CLASS_NONE, 0, 0, 0, 0, 0}
 };
@@ -2826,6 +2830,7 @@ const struct riscv_opcode riscv_insn_types[] =
 {"cb",      0, INSN_CLASS_F_AND_C,  "O2,CF3,CS,Cp",       0,    0,  match_opcode, 0 },
 
 {"cj",      0, INSN_CLASS_C,  "O2,CF3,Ca",          0,    0,  match_opcode, 0 },
+
 /* Terminate the list.  */
 {0, 0, INSN_CLASS_NONE, 0, 0, 0, 0, 0}
 };
