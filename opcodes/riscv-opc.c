@@ -2735,10 +2735,10 @@ const struct riscv_opcode riscv_opcodes[] =
 {"vfdot.vv",   0, INSN_CLASS_V,  "Vd,Vt,VsVm", MATCH_VFDOTVV, MASK_VFDOTVV, match_opcode, 0},
 /* END RVV */
 // ! Custom Instructions
-{"cust0", 0, INSN_CLASS_I, "d,s,t", MATCH_CUST0, MASK_CUST0, match_opcode, 0},
-{"cust1", 0, INSN_CLASS_I, "d,s,t", MATCH_CUST1, MASK_CUST1, match_opcode, 0},
-{"cust2", 0, INSN_CLASS_I, "d,s,t", MATCH_CUST2, MASK_CUST2, match_opcode, 0},
-{"cust3", 0, INSN_CLASS_I, "d,s,t", MATCH_CUST3, MASK_CUST3, match_opcode, 0},
+{"rot",  0, INSN_CLASS_I, "d,s,t", MATCH_ROT,  MASK_ROT,  match_opcode, 0},
+{"roti", 0, INSN_CLASS_I, "d,s,j", MATCH_ROTI, MASK_ROTI, match_opcode, 0},
+{"sbox", 0, INSN_CLASS_I, "d,s,t", MATCH_SBOX, MASK_SBOX, match_opcode, 0},
+{"cust3",0, INSN_CLASS_I, "d,s,j", MATCH_CUST3,MASK_CUST3,match_opcode, 0},
 /* Terminate the list.  */
 {0, 0, INSN_CLASS_NONE, 0, 0, 0, 0, 0}
 };
