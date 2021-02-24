@@ -3311,6 +3311,17 @@ funct6 VM  VS2  VS1/RS1/IMM funct3 VD   opcode
 #define MASK_CDISCARD_D_L1  0xfff07fff
 #define MATCH_CFLUSH_I_L1   0xfc100073
 #define MASK_CFLUSH_I_L1    0xffffffff
+
+// ! Custom Instructions
+#define MATCH_CUST0          0x30000033
+#define MASK_CUST0           0xfe00707f
+#define MATCH_CUST1          0x50000033
+#define MASK_CUST1           0xfe00707f
+#define MATCH_CUST2          0x60000033
+#define MASK_CUST2           0xfe00707f
+#define MATCH_CUST3          0x70000033
+#define MASK_CUST3           0xfe00707f
+
 /* Privileged CSR addresses (v1.11).  */
 #define CSR_USTATUS 0x0
 #define CSR_UIE 0x4
@@ -4002,6 +4013,11 @@ DECLARE_INSN(custom3_rd_rs1_rs2, MATCH_CUSTOM3_RD_RS1_RS2, MASK_CUSTOM3_RD_RS1_R
 DECLARE_INSN(cflush_d_l1, MATCH_CFLUSH_D_L1, MASK_CFLUSH_D_L1)
 DECLARE_INSN(cdiscard_d_l1, MATCH_CDISCARD_D_L1, MASK_CDISCARD_D_L1)
 DECLARE_INSN(cflush_i_l1, MATCH_CFLUSH_I_L1, MASK_CFLUSH_I_L1)
+// ! Custom Instructions
+DECLARE_INSN(cust0, MATCH_CUST0, MASK_CUST0)
+DECLARE_INSN(cust1, MATCH_CUST1, MASK_CUST1)
+DECLARE_INSN(cust2, MATCH_CUST2, MASK_CUST2)
+DECLARE_INSN(cust3, MATCH_CUST3, MASK_CUST3)
 #endif /* DECLARE_INSN.  */
 #ifdef DECLARE_CSR
 /* Privileged.  */
