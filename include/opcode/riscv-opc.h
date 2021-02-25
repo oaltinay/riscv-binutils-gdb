@@ -3315,12 +3315,12 @@ funct6 VM  VS2  VS1/RS1/IMM funct3 VD   opcode
 // ! Custom Instructions
 #define MATCH_ROT          0x30000033
 #define MASK_ROT           0xfe00707f
-#define MATCH_ROTI          0x50000033
-#define MASK_ROTI           0xfe00707f
-#define MATCH_SBOX          0x60000033
-#define MASK_SBOX           0xfe00707f
-#define MATCH_CUST3          0x70000033
-#define MASK_CUST3           0xfe00707f
+#define MATCH_ROTI         0x50000033
+#define MASK_ROTI          0xfe00707f
+#define MATCH_SBOX         0x60000033
+#define MASK_SBOX          0xfe00707f
+#define MATCH_SBOXI        0x70000033
+#define MASK_SBOXI         0xfe00707f
 
 /* Privileged CSR addresses (v1.11).  */
 #define CSR_USTATUS 0x0
@@ -4017,7 +4017,7 @@ DECLARE_INSN(cflush_i_l1, MATCH_CFLUSH_I_L1, MASK_CFLUSH_I_L1)
 DECLARE_INSN(rot, MATCH_ROT, MASK_ROT)
 DECLARE_INSN(roti, MATCH_ROTI, MASK_ROTI)
 DECLARE_INSN(sbox, MATCH_SBOX, MASK_SBOX)
-DECLARE_INSN(cust3, MATCH_CUST3, MASK_CUST3)
+DECLARE_INSN(sboxi, MATCH_SBOXI, MASK_SBOXI)
 #endif /* DECLARE_INSN.  */
 #ifdef DECLARE_CSR
 /* Privileged.  */
